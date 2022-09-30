@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+h1,h2,h3,h4,h5,h6,span,a,p,ul,li{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --primarycolor:#ffca36;
+    --sendarycolor:#353535;
+}
+/* Header stard hear */
+header{
+    background-color: var(--primarycolor);
+    text-align: center;
+}
+header .address p{
+    font-size: 14px;
+    color: var(--sendarycolor);
+
+}
+header .welcom{
+    clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+    color: white;
+    padding: 16px;
+    font-size: 14px;
+    background-color: var(--sendarycolor);
+}
+header .media ul li{
+    display: inline-block;
+    position: relative;
+    margin: 0 5px;
+}
+header .media ul li a{
+    color: var(--secondaryColor);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    position: relative;
+}
+header .media ul li::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+ background-color: var(--secondaryColor);
+ position: absolute;
+ top: 0;
+ left: 0;
+ transform:scale(0);
+ transition:0.3s;
+}
+header .media ul li::before{
+    content: '';
+    width: 100%;
+    height: 1px;
+ background-color: var(--secondaryColor);
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ transform:scale(0);
+ transition:0.3s;
+
+}
+
+header .media ul li a::after{
+ content: '';   
+ width: 1px;
+ height: 100%;
+ background-color: var(--secondaryColor);
+ position: absolute;
+ left: 0;
+ top: 0;
+ transform:scale(0);
+ transition:0.3s;
+}
+header .media ul li a::before{
+    content: '';   
+    width: 1px;
+    height: 100%;
+    background-color: var(--secondaryColor);
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform:scale(0);
+    transition:0.3s;
+}
+header .media ul li:hover::before,
+header .media ul li:hover a::before,
+header .media ul li:hover::after,
+header .media ul li:hover a::after{
+    transform: scale(1.3);
+}
+ 
+
+
+
+/* Header ends hear */
